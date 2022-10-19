@@ -1,33 +1,17 @@
 Feature: Deliver To tests
-
+# S1: In the first test you should click on Deliver to icon. In opened pop up
+#  you should enter a US zip code (you can find list here). And click on apply
+#continue button
+#  Verify the value is updated.
 
   # POSITIVE TESTS
-  Scenario: Click on the menu button and validate the number and the names of the options unfolded
-    When Click on the menu button
-    Then Validate that there are four options unfolded
-    And Validate the names of the four options unfolded
+  Scenario: Click on Deliver to icon, enter a US zip code in opened pop up and validate the value is updated
+  after clicking on apply
+    When Click on Deliver To icon
+    And  Enter a US zip code in CHOOSE YOUR LOCATION pop up and click on APPLY button
+    Then Validate that the value is updated on Deliver To icon
 
-  Scenario: Validate that when clicking on ALL ITEMS option the USER remains on the same page
-    When Click on the menu button
-    And Click on ALL ITEMS option
-    Then Check User remains on Home Page
 
-  Scenario: Validate that the LOGOUT option is displayed
-    When Click on the menu button
-    Then Validate that the LOGOUT option is displayed
 
-  Scenario: Validate that when clicking on LOGOUT option the USER is redirected to LOGIN page
-    When Click on the menu button
-    And Click on LOGOUT option
-    Then Validate User is redirected to Login Page
 
-  Scenario: Validate that when clicking on RESET APP STATE option the USER remains on Home Page
-    When Click on the menu button
-    And Click on RESET APP STATE option
-    Then Check User remains on Home Page
-
-  Scenario: Validate that when clicking on ABOUT option the USER is redirected to "https://saucelabs.com/"
-    When Click on the menu button
-    And Click on ABOUT option
-    Then Check the USER is redirected to "https://saucelabs.com/"
 
