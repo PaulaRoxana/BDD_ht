@@ -1,0 +1,22 @@
+F1. Verify deliver to functionality.
+S1: In the first test you should click on Deliver to icon. In opened pop up
+you should enter a US zip code (you can find list here). And click on apply
+And continue button
+Verify the value is updated.
+S2 In the second test you should verify that in the list of countries Poland is present
+S3: In the third test you should find and choose the country. After that, you should choose any
+category (i.e. headset, keyboards, and so on)
+Click on any element
+In open page you should verify that Shipping to “Country which was chosen at the
+beginning”
+
+F2. Verify search field
+S1: In the first test you should verify if you write incorrect information you should check that
+at result you have No results for “incorrect information”
+S2:  In the second test you should check that when you write some info in a search field at the
+result you see 1-16 of over 5,000 results for "laptop" (you should check that “laptop” word is
+present)
+S3: In the third test you should do the same search as you did in a previous test, but you
+should verify that found elements contain searched word
+Note: not all elements can have the searched word, so you can check that at least one
+element contains the searched word

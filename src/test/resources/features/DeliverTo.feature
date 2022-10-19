@@ -1,9 +1,5 @@
-Feature: Home page tests
+Feature: Deliver To tests
 
-  Background: Login to Home Page
-    Given The User is on "Login Page"
-    And User enters username "standard_user" and password "secret_sauce" on "Login Page"
-    Then Check User is navigated on "Home Page"
 
   # POSITIVE TESTS
   Scenario: Click on the menu button and validate the number and the names of the options unfolded
