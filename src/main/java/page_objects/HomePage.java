@@ -12,7 +12,7 @@ import java.time.Duration;
 public class HomePage extends BasePage {
 
 
-    public static final By productsCategory = By.xpath("//div[@id='kP2xHmji5mGjWrhVX24SkA']//span[text()='Keyboards']");
+    public static final By productsCategory = By.xpath(" //img[@data-a-hires='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_2x._SY232_CB667159063_.jpg']");
     //div[@id='vPc0rf4PTUTlldbJQoZL2A']//span[text()='Keyboards']
     //img[@data-a-hires='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_2x._SY232_CB667159063_.jpg']
     //public static final By productsCategory = By.xpath("//div//img[@alt='Electronics']");

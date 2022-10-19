@@ -68,13 +68,13 @@ public class ChooseYourLocationModule extends BasePage {
                 .toString();
     }
 
-    public HomePage choosePolandFromTheListOfCountries() {
+    public TopBar choosePolandFromTheListOfCountries() {
         clickOnCountriesDropDown();
         WebElement polandOption = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(Poland));
         polandOption.click();
         doneButton.click();
-        return new HomePage (driver);
+        return new TopBar (driver);
     }
 
 }
