@@ -4,7 +4,7 @@ import browsers.factory.WebDriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
-import page_objects.BasePage;
+import page_object.BasePage;
 
 import java.util.HashMap;
 import java.util.Map;
