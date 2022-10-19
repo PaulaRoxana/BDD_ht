@@ -10,7 +10,9 @@ import page_objects.modules.ConfirmationMessage;
 
 import java.time.Duration;
 
-public class ProductPage extends BasePage{
+import static page_objects.TopBar.shipToDestination;
+
+public class ProductsPage extends BasePage{
     public static final By ADD_TO_CART = By.xpath("//input[@id=\"add-to-cart-button\"]");
 
 //    @FindBy(xpath = "//span[contains(text(), 'Amazon Basics 48 Count (Pack of 1)')]")
@@ -18,11 +20,10 @@ public class ProductPage extends BasePage{
 
   //  public static final By shippingDestination = By.xpath("(//span[text()=' No Import Fees Deposit & $14.02 Shipping to Poland '])[3]");
 
-    @FindBy(xpath = "(//span[contains(text(), 'Fiodio Mechanical Gaming Keyboard')])[1]")
-    public static WebElement aProductToShip;
+    public static By aProductToShip = By.xpath("//span[contains(text(), 'Redragon S101 Wired Gaming Keyboard and Mouse Combo RGB Backlit Gaming Keyboard')]");
 
     public  static final By shippingDestination = By.xpath("(//span[contains(text(), 'Shipping to Poland')])[1]");
-    public ProductPage(WebDriver driver) {
+    public ProductsPage(WebDriver driver) {
         super(driver);
     }
 
@@ -33,7 +34,8 @@ public class ProductPage extends BasePage{
         return new ConfirmationMessage(driver);
     }
     public String productsAreShippingToPoland(){
-        aProductToShip.click();
+        new WebDriverWait(driver, Duration.ofSeconds(15))
+                .until(ExpectedConditions.presenceOfElementLocated(aProductToShip)).click();
         return new WebDriverWait(driver, Duration.ofSeconds(15))
                 .until(ExpectedConditions.presenceOfElementLocated(shippingDestination)).getText();
 

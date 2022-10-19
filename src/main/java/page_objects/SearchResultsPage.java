@@ -37,9 +37,9 @@ public class SearchResultsPage extends BasePage{
     public SearchResultsPage(WebDriver driver) {
         super(driver);
     }
-    public ProductPage clickRedragon(){
+    public ProductsPage clickRedragon(){
         REDRAGON_KEYBOARD.click();
-        return new ProductPage(driver);
+        return new ProductsPage(driver);
     }
 
 

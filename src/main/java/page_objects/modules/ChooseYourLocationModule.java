@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import page_objects.BasePage;
+import page_objects.HomePage;
 import page_objects.TopBar;
 
 import java.time.Duration;
@@ -67,13 +68,13 @@ public class ChooseYourLocationModule extends BasePage {
                 .toString();
     }
 
-    public TopBar choosePolandFromTheListOfCountries() {
+    public HomePage choosePolandFromTheListOfCountries() {
         clickOnCountriesDropDown();
-        WebElement polandOption = new WebDriverWait(driver, Duration.ofSeconds(3))
+        WebElement polandOption = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(Poland));
         polandOption.click();
         doneButton.click();
-        return new TopBar(driver);
+        return new HomePage (driver);
     }
 
 }
