@@ -32,8 +32,7 @@ public class HomePage extends BasePage {
         WebElement anyProductsCategory =  new WebDriverWait(driver, Duration.ofSeconds(45))
                 .until(ExpectedConditions.presenceOfElementLocated(productsCategory));
         anyProductsCategory.click();
-        anyProductsCategory.click();
-        return new ProductsPage(driver);
+              return new ProductsPage(driver);
 
     }
 }
