@@ -19,7 +19,7 @@ public class TopBar extends BasePage {
     @FindBy(css = "#glow-ingress-line1")
     public WebElement deliverToButton;
 
-    WebElement destinationBtn;
+    public WebElement destinationBtn;
     public static final By destinationButton = By.xpath("//span[contains(text(), 'Phoenix 85001\u200C')]");
     public static final String expectedUpdatedDestination = "Phoenix 85001\u200C";
 
@@ -39,7 +39,7 @@ public class TopBar extends BasePage {
 
     }
 
-    public ChooseYourLocationModule openChooseYourLocation() {
+    public ChooseYourLocationModule openChooseYourLocationPopUp() {
         deliverToButton.click();
         return new ChooseYourLocationModule(driver);
     }
