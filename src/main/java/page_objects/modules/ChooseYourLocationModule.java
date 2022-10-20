@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import page_objects.BasePage;
-import page_objects.HomePage;
 import page_objects.TopBar;
 
 import java.time.Duration;

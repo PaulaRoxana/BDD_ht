@@ -2,15 +2,10 @@ package page_objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import page_objects.modules.ConfirmationMessage;
 
 import java.time.Duration;
-
-import static page_objects.TopBar.shipToDestination;
 
 public class ProductsPage extends BasePage{
     public static final By ADD_TO_CART = By.xpath("//input[@id=\"add-to-cart-button\"]");
@@ -27,12 +22,6 @@ public class ProductsPage extends BasePage{
         super(driver);
     }
 
-    public ConfirmationMessage addToCart(){
-        new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(ADD_TO_CART))
-                .click();
-        return new ConfirmationMessage(driver);
-    }
     public String productsAreShippingToPoland(){
         new WebDriverWait(driver, Duration.ofSeconds(15))
                 .until(ExpectedConditions.presenceOfElementLocated(aProductToShip)).click();
