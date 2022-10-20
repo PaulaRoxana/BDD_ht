@@ -7,17 +7,12 @@ import page_objects.SearchResultsPage;
 
 import static org.example.stepdefinitions.BaseSteps.driver;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class SearchResultsPageStep {
 
     ProductsPage productsPage = new ProductsPage(driver);
     SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
-
-//    @Then("Validate that the product is shipping to {string}")
-//    public void validateThatTheProductIsShippingToChosenCountry(String specificCountry) {
-//        String shippingToPoland = productsPage.productsAreShippingToPoland();
-//        Assert.assertTrue(shippingToPoland.contains("Shipping to " + specificCountry), "This product should ship to Poland");
-//    }
 
     @Then("Validate that no results were found")
     public void validateThatNoResultsWereFound() {
@@ -27,8 +22,14 @@ public class SearchResultsPageStep {
 
 
     @Then("Validate that the inserted data is present as text within the text showing the number of results found")
-    public void validateThatTheInsertedDataIsPresentAsTextInTheTextShowingTheNumberOfResultFound() {
+    public void validateThatTheInsertedDataIsPresentAsTextWithinTheTextShowingTheNumberOfResultsFound() {
         String resultsVisibleText = searchResultsPage.resultsWereFound();
         assertEquals(resultsVisibleText, '"'+"laptop"+'"', "The text should contain: 'laptop'");
+    }
+
+    @Then("Validate that at least half the names of found elements contain searched data")
+    public void validateThatAtLeastHalfTheNamesOfFoundElementsContainSearchedData() {
+                assertTrue(searchResultsPage.actualFoundResults.stream()
+                .filter(webElement -> webElement.getText().contains("Laptop")).count() >=10);
     }
 }

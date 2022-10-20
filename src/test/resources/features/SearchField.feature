@@ -21,3 +21,7 @@ Feature: Search field tests
 #  should verify that found elements contain searched word
 #  Note: not all elements can have the searched word, so you can check that at least one
 #  element contains the searched word
+
+  Scenario: When writing valid data in search field the names of found elements should contain searched data
+    When User inserts valid data in search field
+    Then Validate that at least half the names of found elements contain searched data
