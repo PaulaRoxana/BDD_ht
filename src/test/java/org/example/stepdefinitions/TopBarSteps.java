@@ -22,4 +22,14 @@ public class TopBarSteps {
         Assert.assertTrue(topBar.destinationBtn.getText().contains("Phoenix"), "The updated value should contain Phoenix");
 
     }
+
+    @When("User inserts invalid data in search field")
+    public void userInsertsInvalidDataInSearchField() {
+        topBar.searchMethod("ggdhtjydyfiuyoiupio[o;oi777777777777777.");
+    }
+
+    @When("User inserts valid data in search field")
+    public void userInsertsValidDataInSearchField() {
+        topBar.searchMethod("laptop");
+    }
 }

@@ -14,6 +14,7 @@ public class HomePageSteps {
 
     @Given("Amazon Home Page is opened")
     public void amazonHomePageIsOpened() {
+
         homePage.openAmazonHomePageAndJustGoToTopBar();
     }
 

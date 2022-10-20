@@ -53,7 +53,6 @@ public class TopBar extends BasePage {
     public HomePage withPolandAsDestination() {
         WebElement shippingDestinationBtn = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(shipToDestination));
-
         return new HomePage(driver);
     }
 

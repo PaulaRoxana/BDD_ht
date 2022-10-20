@@ -1,4 +1,4 @@
-Feature: Deliver To tests
+Feature: Deliver To
 # S1: In the first test you should click on Deliver to icon. In opened pop up
 #  you should enter a US zip code (you can find list here). And click on apply
 #continue button
