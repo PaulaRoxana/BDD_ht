@@ -6,6 +6,7 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import page_objects.BasePage;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,9 @@ public class BaseSteps {
     @Before
     public void initWebDriver() {
         driver = new WebDriverFactory().getWebDriver();
+        driver.get("https://beta.savvymoney.com/ui/page/194/onboarding/sign-up");
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
+        driver.manage().window().maximize();
     }
     @After
     public void afterScenario() {
